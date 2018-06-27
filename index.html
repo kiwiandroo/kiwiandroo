@@ -47,7 +47,7 @@
     /*  making the video fullscreen  */
       position: fixed;
       left: 0; 
-      bottom: 0;
+      top: 0;
       min-width: 100%; 
       min-height: 100%;
       width: auto; 
@@ -99,10 +99,15 @@
     p span {
       white-space: nowrap;
     }
-    @media screen and (max-device-width: 800px) {
+    @media screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
       #video-background {
-      left: -110%; 
+        left: -130%;
+      }
     }
+    @media screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
+      #video-background {
+        left: -130%;
+      }
     }
   </style>
   <noscript>
