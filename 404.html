@@ -35,14 +35,19 @@
       background: #333;
       background-attachment: fixed;
       background-size: cover;
+      font-family: Oswald, sans-serif;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      opacity: 0;
+      transition: 0.8s;
     }
 
     /* The only rule that matters */
     #video-background {
     /*  making the video fullscreen  */
       position: fixed;
-      /* right: 0;  */
-      bottom: 0;
+      left: 0; 
+      top: 0;
       min-width: 100%; 
       min-height: 100%;
       width: auto; 
@@ -54,6 +59,9 @@
     article {
     /*  just a fancy border  */
       position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       top: 0;
       left: 0;
       right: 0;
@@ -63,35 +71,50 @@
     }
 
     h1 {
-      position: absolute;
-      top: 60%;
-      width: 100%;
+      /* position: absolute; */
+      /* top: 60%; */
+      /* width: 100%; */
       font-size: 36px;
       letter-spacing: 3px;
-      color: #fff;
-      font-family: Oswald, sans-serif;
       text-align: center;
     }
+    h1 span {
+      font-size: 14px;
+    }
 
-    h1 span a {
-      color: #fff;
+    p a {
+      color: rgba(255, 255, 255, 0.7);
     }
     footer {
       position: absolute;
       bottom: 0;
     }
     footer p {
-      color: #fff;
       font-family: Oswald, sans-serif;
       font-size: 0.6rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.4rem;
       text-align: center;
       width: 100vw;
     }
     p span {
       white-space: nowrap;
     }
+    @media screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+      #video-background {
+        left: -130%;
+      }
+    }
+    @media screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
+      #video-background {
+        left: -130%;
+      }
+    }
   </style>
+  <noscript>
+    <style>
+      body {opacity: 1}
+    </style>
+  </noscript>
 </head>
 
 <body>
@@ -103,10 +126,12 @@
   </header> -->
   <main>
       <article>
-        <h1>Sorry, page not found</h1>
-        <a href="https://kiwiandroo.com">Go back</a>
+        <div>
+          <h1>KIWI & ROO</h1>
+          <p>Sorry, couldnt find that page</p>
+        </div>
       </article>
-      <video autoplay loop id="video-background" muted plays-inline>
+      <video id="video-background" playsinline autoplay muted loop>
         <source src="./img/Kiwi_and_Roo_Yurt_Feast.webm" type="video/webm">
         <source src="./img/Kiwi_and_Roo_Yurt_Feast.ogv" type="video/ogg">
         <source src="./img/Kiwi_and_Roo_Yurt_Feast.mp4" type="video/mp4">
@@ -125,7 +150,7 @@
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    ga('create', 'UA-121544923-1', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
