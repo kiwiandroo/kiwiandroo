@@ -1,0 +1,26 @@
+{
+  "name": "kiwiandroo",
+  "version": "1.0.0",
+  "description": "Web site of Kiwi &amp; Roo",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start:dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiwiandroo/kiwiandroo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiwiandroo/kiwiandroo/issues"
+  },
+  "homepage": "https://github.com/kiwiandroo/kiwiandroo#readme",
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.4"
+  }
+}
